@@ -84,7 +84,8 @@ curl -X POST '{apiUrl}/sources' \
   -d '{
     "notebook_id": "notebook:xxx",
     "name": "Article Title",
-    "url": "https://example.com/article"
+    "url": "https://example.com/article",
+    "type": "url"
   }'
 ```
 
@@ -97,7 +98,8 @@ curl -X POST '{apiUrl}/sources' \
   -d '{
     "notebook_id": "notebook:xxx",
     "name": "Notes",
-    "text": "My notes content"
+    "content": "My notes content",
+    "type": "text"
   }'
 ```
 
@@ -147,7 +149,9 @@ curl -X POST '{apiUrl}/chat/execute' \
   -H 'Content-Type: application/json' \
   -d '{
     "notebook_id": "notebook:xxx",
-    "message": "Summarize my research"
+    "message": "Summarize my research",
+    "session_id": "chat_session_123",
+    "context": "research_assistant"
   }'
 ```
 
